@@ -114,6 +114,7 @@ It does NOT provide medical diagnosis. Always consult a licensed physician.
 ---
 
 ## Team: Blood_Moon_Coders
+**Developed by:** Blood_Moon_Coders from **N.K Orchid College Of Engineering And Technology, Solapur**
 
-KLS Gogte Institute of Technology, Belagavi
+**Event:** KLS Gogte Institute of Technology, Belagavi
 Hackathon 3.0 · Problem ID: AI-04
