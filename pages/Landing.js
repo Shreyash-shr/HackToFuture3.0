@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
 
 const DISEASES = ['Pneumonia', 'Tuberculosis', 'Lung Opacity', 'Pleural Effusion', 'Cardiomegaly', 'Atelectasis', 'Nodule', 'Mass'];
 
@@ -62,10 +63,11 @@ export default function Landing() {
 
       {/* Navbar */}
       <nav style={{ position: 'relative', zIndex: 10, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1.5rem 3rem' }}>
-        <div style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem' }}>
+        <div style={{ fontFamily: 'var(--font-head)', fontSize: '1.5rem', color: 'var(--white)' }}>
           Medi<span style={{ color: 'var(--teal)' }}>Scan</span> AI
         </div>
-        <div style={{ display: 'flex', gap: '1rem' }}>
+        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+          <ThemeToggle />
           <button onClick={() => navigate('/login')} style={{
             background: 'transparent', border: '1px solid var(--border)',
             color: 'var(--offwhite)', padding: '10px 24px', borderRadius: 'var(--radius-sm)',

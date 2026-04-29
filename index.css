@@ -17,6 +17,7 @@
   --border:     rgba(0,201,177,0.18);
   --card-bg:    rgba(15,32,64,0.7);
   --glass:      rgba(255,255,255,0.04);
+  --nav-bg:     rgba(10,22,40,0.95);
 
   --font-head: 'DM Serif Display', serif;
   --font-body: 'Outfit', sans-serif;
@@ -31,6 +32,26 @@
   --shadow-card: 0 8px 40px rgba(0,0,0,0.4);
 }
 
+[data-theme='light'] {
+  --navy:       #f0f4f8;
+  --navy-mid:   #ffffff;
+  --navy-light: #e1e8ed;
+  --teal:       #0d9488;
+  --teal-dim:   #0f766e;
+  --teal-glow:  rgba(13,148,136,0.1);
+  --cyan:       #0891b2;
+  --red-alert:  #e11d48;
+  --amber:      #d97706;
+  --green-safe: #059669;
+  --white:      #0f172a;
+  --offwhite:   #334155;
+  --muted:      #64748b;
+  --border:     rgba(15,23,42,0.1);
+  --card-bg:    rgba(255,255,255,0.8);
+  --glass:      rgba(15,23,42,0.03);
+  --nav-bg:     rgba(240,244,248,0.9);
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -42,6 +63,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Scrollbar */

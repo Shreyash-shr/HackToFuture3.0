@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -28,9 +28,9 @@ export default function Navbar() {
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
       padding: '0 2rem',
-      background: scrolled ? 'rgba(10,22,40,0.95)' : 'transparent',
+      background: scrolled ? 'var(--nav-bg)' : 'transparent',
       backdropFilter: scrolled ? 'blur(20px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(0,201,177,0.12)' : '1px solid transparent',
+      borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
       transition: 'all 0.3s ease',
       height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
     }}>
@@ -42,7 +42,7 @@ export default function Navbar() {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 18, fontWeight: 700, color: 'var(--navy)',
         }}>M</div>
-        <span style={{ fontFamily: 'var(--font-head)', fontSize: '1.3rem', letterSpacing: '-0.02em' }}>
+        <span style={{ fontFamily: 'var(--font-head)', fontSize: '1.3rem', letterSpacing: '-0.02em', color: 'var(--white)' }}>
           Medi<span style={{ color: 'var(--teal)' }}>Scan</span>
         </span>
       </div>
@@ -72,6 +72,7 @@ export default function Navbar() {
 
       {/* User menu */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <ThemeToggle />
         <div style={{
           display: 'flex', alignItems: 'center', gap: '10px',
           padding: '6px 12px', borderRadius: 'var(--radius-sm)',
