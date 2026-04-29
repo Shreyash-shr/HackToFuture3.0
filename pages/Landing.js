@@ -94,7 +94,7 @@ export default function Landing() {
           fontSize: '0.8rem', fontFamily: 'var(--font-mono)', color: 'var(--teal)', letterSpacing: '0.05em',
         }}>
           <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--teal)', display: 'inline-block', animation: 'pulse-ring 2s infinite' }} />
-          AI-04 · MULTIMODAL DIAGNOSIS SYSTEM
+          Blood_Moon_Coders · MULTIMODAL DIAGNOSIS SYSTEM
         </div>
 
         <h1 style={{

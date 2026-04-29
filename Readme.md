@@ -113,7 +113,7 @@ It does NOT provide medical diagnosis. Always consult a licensed physician.
 
 ---
 
-## Team
+## Team: Blood_Moon_Coders
 
 KLS Gogte Institute of Technology, Belagavi
 Hackathon 3.0 · Problem ID: AI-04
